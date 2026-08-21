@@ -79,7 +79,7 @@ def main():
                 cols_per_row = 4
                 for row_start in range(0, len(results), cols_per_row):
                     row_items = results[row_start:row_start + cols_per_row]
-                    cols = st.columns(len(row_items))
+                    cols = st.columns(cols_per_row)  # fixed-width columns, even on a partial last row
                     for col, item in zip(cols, row_items):
                         with col:
                             if os.path.exists(item["image_path"]):
