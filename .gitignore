@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+models/*.npy
+models/*.index
+models/*.json
+models/*.db
+data/images/*
+!data/images/.gitkeep
+*.ipynb_checkpoints
+raw_dataset/
+*.zip
