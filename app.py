@@ -55,7 +55,7 @@ def main():
 
         with col_query:
             st.subheader("Query Image")
-            st.image(uploaded_file, use_container_width=True)
+            st.image(uploaded_file, width=220)
 
         with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(uploaded_file.name)[1]) as tmp:
             tmp.write(uploaded_file.getbuffer())
@@ -83,7 +83,7 @@ def main():
                     for col, item in zip(cols, row_items):
                         with col:
                             if os.path.exists(item["image_path"]):
-                                st.image(item["image_path"], use_container_width=True)
+                                st.image(item["image_path"], width=150)
                             else:
                                 st.warning("Image file missing.")
                             st.markdown(f"**{item['product_id']}**")
